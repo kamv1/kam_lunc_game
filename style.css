@@ -1,0 +1,206 @@
+/* Genel Sayfa Stilleri */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://storage.googleapis.com/pod_public/1300/203377.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.game-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.buttons button {
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.buttons img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.results {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.scoreboard table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.scoreboard th, .scoreboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.scoreboard th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.scoreboard tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Restart Button Styling */
+#restart-button {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#restart-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}
+
+/* Donate Button Styling */
+#donate-button {
+  display: none;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#donate-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: black;
+}
+
+.donate-options button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.donate-options img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.donate-options button:hover {
+  background-color: #ddd;
+}
+
+#wallet-address {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  word-wrap: break-word;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNC SHIDO USTC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="game-container" id="registration-panel">
+            <h1>Register to Play</h1>
+            <form id="registration-form">
+                <input type="text" id="username" placeholder="Enter your username" required />
+                <button type="button" onclick="registerUser()">Register</button>
+            </form>
+            <button onclick="connectWallet()">Connect Wallet</button>
+            <p id="wallet-status">Wallet: Not connected</p>
+        </div>
+
+        <div class="game-container" id="game-panel" style="display: none;">
+            <h1>LUNC SHIDO USTC</h1>
+            <p>Welcome, <span id="player-name"></span>!</p>
+            <p>Choose your move:</p>
+            <div class="buttons">
+                <button onclick="playGame('lunc')">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/4172.png" alt="LUNC" />
+                </button>
+                <button onclick="playGame('shido')">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/19520.png" alt="SHIDO" />
+                </button>
+                <button onclick="playGame('ustc')">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/7129.png" alt="USTC" />
+                </button>
+            </div>
+            <div class="results">
+                <p id="user-choice">Your choice: </p>
+                <p id="computer-choice">Computer's choice: </p>
+                <p id="result">Result: </p>
+            </div>
+            <div class="scoreboard">
+                <h2>Scoreboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>Your Choice</th>
+                            <th>Computer's Choice</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="score-table">
+                        <!-- Scores will appear here -->
+                    </tbody>
+                </table>
+                <p id="game-status"></p>
+                <div class="button-group">
+                    <button id="restart-button" onclick="resetGame()" style="display: none;">Restart</button>
+                    <button id="donate-button" onclick="showDonateOptions()">Donate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donate Modal -->
+        <div id="donate-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeDonateModal()">&times;</span>
+                <h2>Donate</h2>
+                <p>Select a cryptocurrency to see the wallet address (Click to copy):</p>
+                <div class="donate-options">
+                    <button onclick="showAddress('btc')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png" alt="BTC" />
+                        Bitcoin
+                    </button>
+                    <button onclick="showAddress('eth')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/200px-Ethereum-icon-purple.svg.png" alt="Ethereum" />
+                        Ethereum
+                    </button>
+                    <button onclick="showAddress('lunc')">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtkw7TwP1q-4ly7BVT6G2_giBqGlhbCH8Jg&s" alt="LUNC" />
+                        LUNC
+                    </button>
+                    <button onclick="showAddress('shido')">
+                        <img src="https://assets.coingecko.com/coins/images/32070/large/SHIDO.png?1696530867" alt="SHIDO" />
+                        SHIDO
+                    </button>
+                    <button onclick="showAddress('bnb')">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJZ1mO3I7MyA89mMTxpv7j4mpeI8ZvZ7i1Q&s" alt="BNB" />
+                        BNB
+                    </button>
+                </div>
+                <p id="wallet-address" onclick="copyToClipboard()" title="Click to copy"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

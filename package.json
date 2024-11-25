@@ -1,0 +1,23 @@
+{
+  "name": "kam_lunc_game",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "yes",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tya346/kam_lunc_game.git"
+  },
+  "keywords": [
+    "lunc",
+    "game"
+  ],
+  "author": "kam_lunc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tya346/kam_lunc_game/issues"
+  },
+  "homepage": "https://github.com/tya346/kam_lunc_game#readme"
+}
