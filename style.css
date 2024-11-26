@@ -199,3 +199,41 @@ form button:hover {
   font-weight: bold;
   word-wrap: break-word;
 }
+
+/* Yeni Eklenen Gelişmiş UI Özellikleri */
+
+/* Animasyonlu Arka Plan */
+body {
+  animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover Efektleri */
+.scoreboard th, .scoreboard td {
+  transition: background-color 0.3s;
+}
+
+.scoreboard tr:hover {
+  background-color: #eaf4fc;
+}
+
+/* Butonlar İçin Yeni Animasyonlar */
+.buttons button img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.buttons button:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Yazı Tipleri */
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
