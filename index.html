@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="main-container">
+        <!-- Kayıt Paneli -->
         <div class="game-container" id="registration-panel">
             <h1>Register to Play</h1>
             <form id="registration-form">
@@ -18,10 +19,13 @@
             <p id="wallet-status">Wallet: Not connected</p>
         </div>
 
+        <!-- Oyun Paneli -->
         <div class="game-container" id="game-panel" style="display: none;">
             <h1>LUNC SHIDO USTC</h1>
             <p>Welcome, <span id="player-name"></span>!</p>
             <p>Choose your move:</p>
+            
+            <!-- Oyun Seçenekleri -->
             <div class="buttons">
                 <button onclick="playGame('lunc')">
                     <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/4172.png" alt="LUNC" />
@@ -33,11 +37,15 @@
                     <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/7129.png" alt="USTC" />
                 </button>
             </div>
+
+            <!-- Sonuçlar -->
             <div class="results">
                 <p id="user-choice">Your choice: </p>
-                <p id="computer-choice">Computer's choice: </p>
+                <p id="computer-choice">KAM's choice: </p>
                 <p id="result">Result: </p>
             </div>
+
+            <!-- Skor Tablosu -->
             <div class="scoreboard">
                 <h2>Scoreboard</h2>
                 <table>
@@ -45,15 +53,17 @@
                         <tr>
                             <th>Round</th>
                             <th>Your Choice</th>
-                            <th>Computer's Choice</th>
+                            <th>KAM's Choice</th>
                             <th>Result</th>
                         </tr>
                     </thead>
                     <tbody id="score-table">
-                        <!-- Scores will appear here -->
+                        <!-- Skorlar burada görünecek -->
                     </tbody>
                 </table>
                 <p id="game-status"></p>
+
+                <!-- Buton Grubu -->
                 <div class="button-group">
                     <button id="restart-button" onclick="resetGame()" style="display: none;">Restart</button>
                     <button id="donate-button" onclick="showDonateOptions()">Donate</button>
@@ -61,7 +71,7 @@
             </div>
         </div>
 
-        <!-- Donate Modal -->
+        <!-- Bağış Paneli -->
         <div id="donate-modal" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close-button" onclick="closeDonateModal()">&times;</span>
@@ -93,6 +103,8 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
